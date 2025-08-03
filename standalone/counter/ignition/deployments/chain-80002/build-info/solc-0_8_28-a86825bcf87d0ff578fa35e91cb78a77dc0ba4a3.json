@@ -1,0 +1,39 @@
+{
+  "_format": "hh3-sol-build-info-1",
+  "id": "solc-0_8_28-a86825bcf87d0ff578fa35e91cb78a77dc0ba4a3",
+  "solcVersion": "0.8.28",
+  "solcLongVersion": "0.8.28+commit.7893614a",
+  "userSourceNameMap": {
+    "contracts/Counter.sol": "project/contracts/Counter.sol"
+  },
+  "input": {
+    "language": "Solidity",
+    "settings": {
+      "evmVersion": "cancun",
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "outputSelection": {
+        "*": {
+          "": [
+            "ast"
+          ],
+          "*": [
+            "abi",
+            "evm.bytecode",
+            "evm.deployedBytecode",
+            "evm.methodIdentifiers",
+            "metadata"
+          ]
+        }
+      },
+      "remappings": []
+    },
+    "sources": {
+      "project/contracts/Counter.sol": {
+        "content": "// SPDX-License-Identifier: UNLICENSED\npragma solidity ^0.8.28;\n\ncontract Counter {\n    uint256 public number;\n\n    constructor(uint256 initialNumber) {\n        number = initialNumber;\n    }\n    \n    event NumberIncremented(uint256 updatedNumber);\n    event NumberDecremented(uint256 updatedNumber);\n    \n    function increment() public {\n        number += 1;\n        emit NumberIncremented(number);\n    }\n    \n    function decrement() public {\n        number -= 1;\n        emit NumberDecremented(number);\n    }\n}"
+      }
+    }
+  }
+}
