@@ -1,13 +1,19 @@
 {
-  "name": "recycle-chain",
-  "version": "1.0.0",
-  "description": "",
-  "private": true,
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.14.0"
+    "name": "recycle-chain",
+    "version": "1.0.0",
+    "description": "",
+    "private": true,
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build:all": "nx run-many -t build",
+        "lint:all": "nx run-many -t lint",
+        "typecheck:all": "nx run-many typescript -t typescript:check" 
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "packageManager": "pnpm@10.14.0",
+    "devDependencies": {
+        "nx": "21.4.0"
+    }
 }
